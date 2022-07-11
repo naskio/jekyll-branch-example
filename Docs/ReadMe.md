@@ -98,3 +98,5 @@ They cover a wide swath of uses for ILGPU including much of the more complex thi
 [Upgrade v0.8.0 to v0.8.1](Upgrade-v0.8.0-to-v0.8.1.md)
 
 [Upgrade v0.8.X to v0.9.X](Upgrade-v0.8.X-to-v0.9.X.md)
+
+> Version: 0.0.1
