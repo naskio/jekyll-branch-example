@@ -3,10 +3,15 @@
 # - GITHUB_TOKEN (default), usage: ${{ secrets.GITHUB_TOKEN }}
 ###################
 
-name: Sync docs folder between `main` and `gh-pages` branches
+name: Sync `Docs/` folder between `main` and `gh-pages` branches
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Docs/**'
 
 jobs:
   copy-to-branches:
