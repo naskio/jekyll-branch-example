@@ -1,0 +1,21 @@
+###################
+# ENV VARS:
+# - GITHUB_TOKEN (default), usage: ${{ secrets.GITHUB_TOKEN }}
+###################
+
+name: Sync docs folder between `main` and `gh-pages` branches
+
+on:
+  workflow_dispatch:
+
+jobs:
+  copy-to-branches:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Copy To Branches Action
+        uses: planetoftheweb/copy-to-branches@v1.2
+        env:
+          key: main
+          files: Docs/
+          branches: gh-pages
